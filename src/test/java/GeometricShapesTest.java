@@ -54,4 +54,19 @@ public class GeometricShapesTest {
             assertEquals(-4,rectangle.perimeter());
         }
     }
+
+    @Nested
+    public class SquareAreaAndPerimeterTest{
+        @Test
+        void toCalculateAreaWhenSideIsPositive(){
+           Square square = new Square(4);
+           assertEquals(16,square.area());
+        }
+
+        @Test
+        void toCalculateAreaWhenSideIsNegative(){
+            Square square = new Square(-4);
+            assertEquals(16,square.area());
+        }
+    }
 }
