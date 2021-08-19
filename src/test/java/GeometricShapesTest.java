@@ -68,5 +68,17 @@ public class GeometricShapesTest {
             Square square = new Square(-4);
             assertEquals(16,square.area());
         }
+
+        @Test
+        void toCalculatePerimeterWhenSideIsPositive(){
+            Square square = new Square(4);
+            assertEquals(16,square.perimeter());
+        }
+
+        @Test
+        void toCalculatePerimeterWhenSideIsNegative(){
+            Square square = new Square(-4);
+            assertEquals(-16,square.perimeter());
+        }
     }
 }
