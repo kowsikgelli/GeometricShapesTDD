@@ -25,9 +25,33 @@ public class GeometricShapesTest {
         }
 
         @Test
-        void toCalculateWhenLengthIsNegativeAndWidthIsPositive(){
+        void toCalculateAreaWhenLengthIsNegativeAndWidthIsPositive(){
             Rectangle rectangle = new Rectangle(-4,2);
             assertEquals(-8,rectangle.area());
+        }
+
+        @Test
+        void toCalculatePerimeterWhenLengthAndWidthArePositive(){
+            Rectangle rectangle = new Rectangle(4,2);
+            assertEquals(12,rectangle.perimeter());
+        }
+
+        @Test
+        void toCalculatePerimeterWhenLengthAndWidthAreNegative(){
+            Rectangle rectangle = new Rectangle(-4,-2);
+            assertEquals(-12,rectangle.perimeter());
+        }
+
+        @Test
+        void toCalculatePerimeterWhenLengthIsPositiveAndWidthIsNegative(){
+            Rectangle rectangle = new Rectangle(4,-2);
+            assertEquals(4,rectangle.perimeter());
+        }
+
+        @Test
+        void toCalculatePerimeterWhenLengthIsNegativeAndWidthIsPositive(){
+            Rectangle rectangle = new Rectangle(-4,2);
+            assertEquals(-4,rectangle.perimeter());
         }
     }
 }
